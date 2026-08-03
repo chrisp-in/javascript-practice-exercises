@@ -28,5 +28,3 @@ const sumUnique = array => {
   return sum;
 }
 console.log(sumUnique([5, 5, 10, 15, 20, 25, 25]));
-
-  
