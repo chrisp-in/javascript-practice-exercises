@@ -24,4 +24,4 @@ function split(string,mask) {
         return container;
     }
 }
-console.log(split("codewars",[4, 4]));
+
