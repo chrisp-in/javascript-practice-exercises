@@ -38,12 +38,13 @@ function App() {
     <div>
       <h1>Coffee Order Counter</h1>
       <div>
-        {coffees.map(coffee => (
+        {coffees.map(coffee => {
+          return(
           <CoffeeCard key={coffee.id}
             name={coffee.name}
             price={coffee.price}
-          />
-        ))}
+          />);
+        })}
       </div>
     </div>
   );
