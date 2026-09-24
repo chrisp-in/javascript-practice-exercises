@@ -1,6 +1,13 @@
 import { useState } from "react";
 
 function App() {
+  const coffees = [
+  { id: 1, name: "Latte", price: 3 },
+  { id: 2, name: "Mocha", price: 5 },
+  { id: 3, name: "Espresso", price: 2 }
+];
+
+
   function CoffeeCard(props) {
     const [quantity, setQuantity] = useState(0);
 
@@ -30,10 +37,14 @@ function App() {
   return (
     <div>
       <h1>Coffee Order Counter</h1>
-
-      <CoffeeCard name="Latte" price={3} />
-      <CoffeeCard name="Mocha" price={5} />
-      <CoffeeCard name="Espresso" price={2} />
+      <div>
+        {coffees.map(coffee => (
+          <CoffeeCard key={coffee.id}
+            name={coffee.name}
+            price={coffee.price}
+          />
+        ))}
+      </div>
     </div>
   );
 }
